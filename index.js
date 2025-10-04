@@ -28,7 +28,7 @@ app.post("/api/send", async (req, res) => {
     }
 
     const { error } = await supabase
-        .from("em")
+        .from("invitee")
         .insert([{ name, message, participants: parseInt(participants) }]);
 
     if (error) {
